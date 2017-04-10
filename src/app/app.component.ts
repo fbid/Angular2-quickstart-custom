@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { BoldHoverDirective } from './bold-hover.directive';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: ['styles.css']
+  styleUrls: ['styles.css'],
+  directives: ['BoldHoverDirective']
 })
 export class AppComponent  {
   name: string = 'World';
