@@ -1,0 +1,18 @@
+<layout-header
+  [name]="name"
+  (onNameChanged)="setName($event)">
+></layout-header>
+
+<ul>
+  <li *ngFor="let fruit of fruits">
+    {{fruit}}
+  </li>
+</ul>
+
+<div [hidden]="fruits[0] === 'apples'">
+  You added coconuts!
+</div>
+<button (click)="changeFruitName()">Change Apples with Coconuts</button>
+
+
+<h3>APP BODY HERE...</h3>
