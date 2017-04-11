@@ -3,13 +3,13 @@
   (onNameChanged)="setName($event)">
 ></layout-header>
 
-<ul>
-  <li *ngFor="let fruit of fruits">
-    {{fruit}}
-  </li>
+<ul *ngFor="let fruit of fruits">
+  <li> {{fruit.name}} </li>
+  <li> {{fruit.bio}} </li>
+  <li *ngIf="fruit.origin">{{fruit.origin}}</li>
 </ul>
 
-<div [hidden]="fruits[0] === 'apples'">
+<div [hidden]="fruits[0].name !== 'coconuts'">
   You added coconuts!
 </div>
 <button (click)="changeFruitName()">Change Apples with Coconuts</button>

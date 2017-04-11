@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Fruit } from './shared/models/fruit';
+
 
 @Component({
   selector: 'my-app',
@@ -8,15 +10,14 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name: string = 'World';
 
-  fruits: string[] = [
-    'apples',
-    'pears',
-    'peaches',
-    'kiwis'
+  fruits: Fruit[] = [
+    { name:'Kiwi', bio: false, origin: 'Brazil' },
+    { name: 'Apples', bio: true },
+    { name: 'Peaches', bio: false, origin: 'Spain' }
   ];
 
   changeFruitName(){
-    this.fruits[0] = 'coconuts';
+    this.fruits[0].name = 'coconuts';
   }
 
   setName(newName:string){
