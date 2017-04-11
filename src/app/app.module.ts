@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
 import { HeaderComponent } from './shared/layout/header.component';
-import { BoldHoverDirective } from './bold-hover.directive';
+import { BoldHoverDirective } from './directives/bold-hover.directive';
+import { CapitalizePipe } from './pipes/capitalize.pipe'
 
 @NgModule({
   imports:      [ BrowserModule ],
   declarations: [
     AppComponent,
     HeaderComponent,
-    BoldHoverDirective
+    BoldHoverDirective,
+    CapitalizePipe
   ],
   bootstrap:    [ AppComponent ]
 })
